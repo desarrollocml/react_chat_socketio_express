@@ -12,10 +12,12 @@ const io = socketio(servidor);
 //Funcionalidad de socket.io en el servidor
 io.on("connection", (socket) => {
 
-  socket.on("conectado",()=>{
+  /* socket.on("conectado",()=>{
     console.log("usuario conectado")
-  })
+  }) */
 
+
+  
 
 });
 
