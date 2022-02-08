@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Chat from "./componentes/Chat";
 import "./App.css";
-import socket from "./componentes/Socket";
 
 function App() {
   //socket.emit("conectado","hola desde cliente")
@@ -21,10 +20,10 @@ function App() {
       {
         !registrado &&
         <form onSubmit={registrar}>
-        <label htmlFor="">Introduzaca su nombre</label>
-        <input value={nombre} onChange={e=>setNombre(e.target.value)}/>
-        <button>Ir al chat</button>
-      </form>
+          <label htmlFor="">Introduzaca su nombre</label>
+          <input value={nombre} onChange={e=>setNombre(e.target.value)}/>
+          <button>Ir al chat</button>
+         </form>
       }
       {
         registrado &&
