@@ -18,11 +18,19 @@ function App() {
  
   return (
     <div className="App">
-      <form onSubmit={registrar}>
-        <label htmlForm="">Introduzaca su nombre</label>
+      {
+        !registrado &&
+        <form onSubmit={registrar}>
+        <label htmlFor="">Introduzaca su nombre</label>
         <input value={nombre} onChange={e=>setNombre(e.target.value)}/>
         <button>Ir al chat</button>
       </form>
+      }
+      {
+        registrado &&
+        <Chat nombre={nombre} />
+      }
+     
     </div>
   );
 }
